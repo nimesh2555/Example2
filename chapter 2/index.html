@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>A Simple App</title>
+
+    <link href='style.css' rel='stylesheet' type='text/css'>
+      <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+   <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript">
+      
+    </script> 
+  </head>
+
+  <body>
+    <header>
+      <h1>Comments</h1>
+      <p>A simple app that allows a user to input comments</p>
+    </header>
+
+    <main>
+      <section class='comment-input'>
+        <p>Add Your Comment:</p>
+        <input type="text" data-bind="value:Comment"><button data-bind="click:AddComment">+</button>
+      </section>
+
+      <section class='comments'>
+        <p>This is the first comment!</p>
+        <p>Here's the second one!</p>
+        <p>And this is one more.</p>
+        <p>Here is another one!</p>
+        <article data-bind="foreach:CommentList">
+        <p data-bind="text:$data"></p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>this work is released into the public domain</p>
+    </footer>
+
+   
+   
+  </body>
+</html>
